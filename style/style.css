@@ -1,0 +1,106 @@
+.body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative; /* Added relative positioning for the moving background */
+}
+
+.moving-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #3498db, #e74c3c);
+    animation: moveBackground 10s linear infinite;
+    animation-timing-function: ease-in-out;
+    z-index: -1;
+    pointer-events: none; /* This line ensures that the background won't capture mouse events */
+}
+
+
+@keyframes moveBackground {
+    10% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 600px;
+    text-align: center;
+    margin-top: 150px; 
+}
+
+.iframe-container {
+    margin-top: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button.game {
+    background-color: #3498db;
+}
+
+.button.code {
+    background-color: #2ecc71;
+}
+
+.footer {
+    margin-top:100px;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
